@@ -3,7 +3,7 @@ import 'react-native-gesture-handler';
 import {Provider} from 'react-redux';
 
 import MainStack from './src/navigation/mainStack';
-import store from './src/redux/reducer/store';
+import store from './src/redux/store';
 
 const App = () => {
   console.log("hello world")
