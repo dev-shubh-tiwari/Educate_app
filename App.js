@@ -6,7 +6,7 @@ import MainStack from './src/navigation/mainStack';
 import store from './src/redux/store';
 
 const App = () => {
-  console.log("hello world")
+  
   return (
     <Provider store={store}>
       <MainStack />
