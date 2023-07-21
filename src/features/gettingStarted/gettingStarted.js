@@ -6,7 +6,7 @@ import {ms} from 'react-native-size-matters';
 import BottomButton from '../../component/button';
 import BottomText from '../../component/bottomText';
 
-const GettingStarted = () => {
+const GettingStarted = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.getStartedImage}>
@@ -17,8 +17,19 @@ const GettingStarted = () => {
           </Text>
         </View>
       </View>
-      <BottomButton title="Sign in" />
-      <BottomText textDetail="Don’t have an ID?" text="Create now" />
+      <BottomButton
+        title="Sign in"
+        Press={() => {
+          navigation.navigate('login');
+        }}
+      />
+      <BottomText
+        textDetail="Don’t have an ID?"
+        text="Create now"
+        Press={() => {
+          navigation.navigate('register');
+        }}
+      />
     </View>
   );
 };

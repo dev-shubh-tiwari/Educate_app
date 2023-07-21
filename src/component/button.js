@@ -3,9 +3,9 @@ import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {themes} from '../themes/theme';
 import {ms} from 'react-native-size-matters';
 
-const BottomButton = ({onPress, title}) => {
+const BottomButton = ({Press, title}) => {
   return (
-    <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
+    <TouchableOpacity style={styles.buttonContainer} onPress={Press}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
@@ -17,14 +17,15 @@ const styles = StyleSheet.create({
     backgroundColor: themes.light.color.lightGreen,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 16,
-    paddingRight: 16,
+    paddingVertical: ms(16),
+    paddingRight: ms(16),
     position: 'absolute',
-    bottom: 58,
+    bottom: ms(58),
   },
   buttonText: {
-    color: '#FFFFFF', 
+    color: '#FFFFFF',
     fontSize: ms(17),
+    textAlign: 'center',
     fontFamily: themes.light.fontFamily.bold,
   },
 });
